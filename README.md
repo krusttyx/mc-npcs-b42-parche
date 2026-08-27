@@ -159,13 +159,21 @@ zombie\characters\IsoSurvivor.class
 
 Deleting it leaves the game exactly as it was.
 
-### Windows will show a warning
+### Windows and the installer
 
-The first time you'll get **"Windows protected your PC"** with the publisher
-listed as unknown. Click **More info** → **Run anyway**.
+Windows may **block the `.exe` on download**, or show "Windows protected your
+PC" when you open it.
 
-This happens because the executable isn't signed with a code signing
-certificate, which is a paid, yearly subscription. The program works fine.
+There's nothing wrong with the file: it's that **it does exactly what an
+installer does** — carries a file inside, extracts it and writes it into the
+game folder asking for permissions. Without a code signing certificate, which
+is a paid yearly subscription, Windows' heuristics can't tell that apart from a
+malicious program.
+
+**If it happens, use the ZIP.** It does the same thing, it's 2 KB, and there's
+nothing to run.
+
+If you'd rather use the installer: **More info** → **Run anyway**.
 
 If you'd rather verify the file is what it claims to be, here's its hash. In
 PowerShell:
