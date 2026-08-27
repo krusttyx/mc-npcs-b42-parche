@@ -1,0 +1,4 @@
+# El ejecutable NO va en el repositorio: se publica como Release.
+# Asi el historial no engorda con un binario de 400 KB en cada version.
+*.exe
+*.zip
