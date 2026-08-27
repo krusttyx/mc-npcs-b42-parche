@@ -28,11 +28,30 @@ verán a nadie.
 
 ### Cómo se instala
 
-1. Descarga `NPC-MC-B42.exe` desde [Releases](../../releases/latest)
-2. Ábrelo y pulsa el botón
+Hay dos formas. **La primera es la recomendada.**
+
+#### A) ZIP — 2 KB, sin avisos de Windows
+
+1. Descarga `NPC-MC-B42-manual.zip` desde [Releases](../../releases/latest)
+2. Copia la carpeta `zombie` que lleva dentro a la carpeta de Project Zomboid
+   (di que sí al combinar carpetas)
 3. Entra al juego
 
-El instalador te enseña antes la lista exacta de archivos que va a escribir.
+Tiene que quedar así:
+
+```
+...\ProjectZomboid\zombie\characters\IsoSurvivor.class
+```
+
+No hay nada que ejecutar, así que Windows no dice nada.
+
+#### B) Instalador — un botón
+
+1. Descarga `NPC-MC-B42.exe` desde [Releases](../../releases/latest)
+2. Ábrelo y pulsa el botón
+
+Hace exactamente lo mismo que el ZIP. **Windows puede bloquearlo al
+descargarlo** — mira el apartado de abajo.
 
 ### Cómo se desinstala
 
@@ -45,13 +64,20 @@ zombie\characters\IsoSurvivor.class
 
 Borrarlo deja el juego exactamente como estaba.
 
-### Windows va a mostrar un aviso
+### Windows y el instalador
 
-La primera vez saldrá **«Windows protegió su PC»** con el editor marcado como
-desconocido. Pulsa **Más información** → **Ejecutar de todas formas**.
+Windows puede **bloquear el `.exe` al descargarlo** o mostrar «Windows protegió
+su PC» al abrirlo.
 
-Sale porque el ejecutable no está firmado con un certificado de firma de código,
-que es de pago y de renovación anual. El programa funciona igual.
+No es que el archivo tenga nada: es que **hace exactamente lo que hace un
+instalador** — lleva un archivo dentro, lo extrae y lo escribe en la carpeta del
+juego pidiendo permisos. Sin un certificado de firma de código, que es de pago y
+de renovación anual, la heurística de Windows no distingue eso de un programa
+malicioso.
+
+**Si te pasa, usa el ZIP.** Hace lo mismo, son 2 KB, y no hay nada que ejecutar.
+
+Si prefieres el instalador: **Más información** → **Ejecutar de todas formas**.
 
 Si prefieres comprobar que el archivo es el que dice ser, este es su hash. En
 PowerShell:
@@ -60,9 +86,10 @@ PowerShell:
 Get-FileHash "NPC-MC-B42.exe" -Algorithm SHA256
 ```
 
-| Versión | SHA-256 |
+| Archivo | SHA-256 |
 |---|---|
-| 1.0.0 | `9815dbbdf4aa041bed490e7f35dc65d2f78acf370a9b44bc49a385fd33e720a8` |
+| `NPC-MC-B42.exe` | `9815dbbdf4aa041bed490e7f35dc65d2f78acf370a9b44bc49a385fd33e720a8` |
+| `NPC-MC-B42-manual.zip` | `302c85aadbd4ef3d376d499e93799573bf0a7cd00d3e91c2a4ccb8b3fd1a0597` |
 
 ### Compatibilidad
 
@@ -96,12 +123,30 @@ admin, tell your players they must install it themselves or they'll see nobody.
 
 ### How to install
 
-1. Download `NPC-MC-B42.exe` from [Releases](../../releases/latest)
-2. Open it and press the button
+Two ways. **The first one is recommended.**
+
+#### A) ZIP — 2 KB, no Windows warnings
+
+1. Download `NPC-MC-B42-manual.zip` from [Releases](../../releases/latest)
+2. Copy the `zombie` folder inside it into your Project Zomboid folder
+   (say yes to merging folders)
 3. Launch the game
 
-The installer shows you the exact list of files it will write before writing
-anything.
+It should end up like this:
+
+```
+...\ProjectZomboid\zombie\characters\IsoSurvivor.class
+```
+
+There's nothing to run, so Windows says nothing.
+
+#### B) Installer — one button
+
+1. Download `NPC-MC-B42.exe` from [Releases](../../releases/latest)
+2. Open it and press the button
+
+It does exactly the same as the ZIP. **Windows may block it on download** —
+see the section below.
 
 ### How to uninstall
 
@@ -129,9 +174,10 @@ PowerShell:
 Get-FileHash "NPC-MC-B42.exe" -Algorithm SHA256
 ```
 
-| Version | SHA-256 |
+| File | SHA-256 |
 |---|---|
-| 1.0.0 | `9815dbbdf4aa041bed490e7f35dc65d2f78acf370a9b44bc49a385fd33e720a8` |
+| `NPC-MC-B42.exe` | `9815dbbdf4aa041bed490e7f35dc65d2f78acf370a9b44bc49a385fd33e720a8` |
+| `NPC-MC-B42-manual.zip` | `302c85aadbd4ef3d376d499e93799573bf0a7cd00d3e91c2a4ccb8b3fd1a0597` |
 
 ### Compatibility
 
